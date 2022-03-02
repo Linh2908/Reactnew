@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useCallback, useState } from 'react';
 import './App.css';
+import StudentInfo from './Component/StudentInfo';
 
 
 function App() {
@@ -39,12 +40,14 @@ function App() {
     });
 
 
-    const hanldeDeleteStudent = (id) => {
-        const newList = studentList.filter(student => student.uuid !== id);
-         
-        setStudentList(newList)
-        
-    }
+    const hanldeDeleteStudent = useCallback((id) => {
+      const newList = studentList.filter(student => student.uuid !== id);
+       
+      setStudentList(newList)
+      
+  }, [studentList]);
+
+
     const handleChange = (e) => {
       setStudent(prev => ({
         ...prev,
@@ -91,16 +94,7 @@ function App() {
          </tr>
        </thead>
        <tbody>
-         {
-           studentList.map(student => (
-             <tr key={student.uuid}>
-               <td>{student.uuid}</td>
-               <td>{student.fullName}</td>
-               <td>{student.points}</td>
-               <td><button onClick={() => hanldeDeleteStudent(student.uuid)}>Delete</button></td>
-             </tr>
-           ))
-         }
+          <StudentInfo studentList={studentList} onDelete={hanldeDeleteStudent} />
        </tbody>
      </table>
     </div>
