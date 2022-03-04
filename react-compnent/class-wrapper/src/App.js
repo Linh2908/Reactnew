@@ -94,7 +94,10 @@ function App() {
          </tr>
        </thead>
        <tbody>
-          <StudentInfo studentList={studentList} onDelete={hanldeDeleteStudent} />
+          <StudentInfo 
+            studentList={studentList} 
+            onDelete={hanldeDeleteStudent} 
+          />
        </tbody>
      </table>
     </div>
