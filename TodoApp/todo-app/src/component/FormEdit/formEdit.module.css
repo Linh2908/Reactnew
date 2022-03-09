@@ -1,0 +1,26 @@
+.main{
+    position: fixed;
+    top:0;
+    height: 100vh;
+    width: 100vw;
+    text-align: center;
+    z-index: 1;
+    background-color: rgba(255,255,255, 0.5);
+}
+.wrap{
+    border-radius: 5px;
+    background-color: rgb(53, 209, 157);
+    padding: 40px;
+    width: 200px;
+    margin: 200px auto;
+}
+.input{
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+}
+.btn_wrap{
+    display: flex;
+    justify-content: space-around;
+    margin: 10px;
+}
