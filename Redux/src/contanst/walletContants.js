@@ -1,0 +1,3 @@
+export const ORDER_CONFIRM = 'ORDER_CONFIRM';
+export const ORDER_PAY = 'ORDER_PAY';
+export const ORDER_PAY_FAILURE = 'ORDER_PAY_FAILURE';
