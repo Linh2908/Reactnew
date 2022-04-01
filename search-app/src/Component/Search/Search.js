@@ -7,7 +7,7 @@ function Search  () {
 
     const arrayList = ['apple', 'banana', 'oringe', 'grapes'];
 
-    const newArray = arrayList.filter(item => item.match(name))
+    const newArray = arrayList.filter(item => item.includes(name))
 
 
     return (
